@@ -1,0 +1,67 @@
+@keyframes tornado {
+    0% {
+      transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+      transform: scale(1.2); /* Agrandar el tornado */
+    }
+    100% {
+      transform: scale(1); /* Volver al tamaño normal */
+    }
+  }
+  
+  @keyframes text-animation {
+    0% {
+      transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+      transform: scale(1.1); /* Agrandar el texto */
+    }
+    100% {
+      transform: scale(1); /* Volver al tamaño normal */
+    }
+  }
+  
+  @keyframes disappear {
+    0%, 50% {
+      opacity: 1; /* Visible */
+    }
+    100% {
+      opacity: 0; /* Invisible */
+    }
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .background {
+    background: linear-gradient(to bottom, #000000, #333333);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    animation: text-animation 4s ease-in-out infinite alternate, disappear 4s ease-in-out infinite alternate; /* Ajustar la duración de la animación de texto y el desvanecimiento para que coincidan */
+  }
+  
+  .logo-container {
+    margin-right: 20px;
+    flex-shrink: 0;
+    animation: tornado 4s ease-in-out infinite alternate, disappear 4s ease-in-out infinite alternate; /* Ajustar la duración de la animación del tornado y el desvanecimiento para que coincidan */
+  }
+  
+  h1 {
+    font-weight: bold;
+    font-size: 36px;
+  }
+  
